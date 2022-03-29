@@ -1,21 +1,22 @@
+### INDEX
 GET http://localhost:3000/songs
 
-###
+### READ/SHOW
 GET http://localhost:3000/songs/2
 
-###
+### CREATE
 POST http://localhost:3000/songs
 content-type: application/json
 
 {
-  "title": "Crowhurst's Meme",
-  "album": "Collections From the Whiteout",
-  "artist": "Ben Howard",
-  "year": 2021
+  "title": "Bananaphone",
+  "album": "Kids Songs",
+  "artist": "Raffi",
+  "year": 2004
 }
 
-###
-PATCH http://localhost:3000/songs/3
+### UPDATE
+PATCH http://localhost:3000/songs/4
 content-type: application/json
 
 {
@@ -23,5 +24,5 @@ content-type: application/json
   "album": "untitled album"
 }
 
-###
-DELETE http://localhost:3000/songs/2
+### DELETE/DESTROY
+DELETE http://localhost:3000/songs/4

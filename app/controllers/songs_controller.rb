@@ -17,7 +17,7 @@ class SongsController < ApplicationController
       year: params[:year]
     )
     song.save
-    render json: Song.last.as_json
+    render json: song.as_json
   end
 
   def update
@@ -27,7 +27,7 @@ class SongsController < ApplicationController
     song.artist = params[:artist] || song.artist
     song.year = params[:year] || song.year
     song.save
-    render json: Song.find_by(id: params[:id]).as_json
+    render json: song.as_json
   end
 
   def destroy
